@@ -3,6 +3,7 @@ Discussion
 
 ###Git
 ![](../images/git-logo.png)
+
 Git is an open-source version control system that is used for mainly software development, but it has recently expanded into supporting various types of documents in additional to software files in different languages. It is usually pre-installed on most Mac OSX systems, but Windows machines might have to manually install it. Git allows user to keep track of changes to files and folders, and often times between multiple authors or developers, within a repository. Developers can see all the histories of all the files in the repository as well as the description on each individial change. One advantage of Git over some other version control system is that it saves a copy of the entire repo on the user's machine, so user can work offline and save all changes without needing any network connection. Of course, if one wants other collaborators to receive the changes, one will need to connect to the internet and push the changes onto a git server. 
 
 The first step of using Git is obtain or create a repository. One can either clone an existing repo, or initialize a new one. In this project, I created my own Git repo by using the following commands:
@@ -42,22 +43,23 @@ git pull origin master
 ```
 
 Below are some useful commands of git:
-- git help
+- **git help**
         - help document
-- git config 
+- **git config**
         - configuration
-- git init
+- **git init**
         - initialize a new repo
-- git status 
+- **git status**
         - check status of files in the repo
-- git add
+- **git add**
         - stage changes of specific files
-- git commit 
+- **git commit** 
         - save staged changes into a commit with a message
-- git log
+- **git log**
         - see a history of all changes
-- git diff
+- **git diff**
         - see changes between commits or files
+---
 
 ###GitHub
 ![](../images/github-logo.png)
