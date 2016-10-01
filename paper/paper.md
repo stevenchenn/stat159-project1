@@ -133,28 +133,20 @@ git pull origin master
 Below are some useful commands of git:
 
 -   **git help**
-
     -   help document
 -   **git config**
-
     -   configuration
 -   **git init**
-
     -   initialize a new repo
 -   **git status**
-
     -   check status of files in the repo
 -   **git add**
-
     -   stage changes of specific files
 -   **git commit**
-
     -   save staged changes into a commit with a message
 -   **git log**
-
     -   see a history of all changes
 -   **git diff**
-
     -   see changes between commits or files
 
 ### GitHub
@@ -215,32 +207,24 @@ writers can format a document with far less time that writing in other
 syntax. One major advantage of using Markdown is the portability of the
 file, as writer can exit the file in any text editor in any system.
 There is no need to compress and archive because the size of the file is
-the smallest you could get. Below are some of the most important
-features within the Markdown language:
+the smallest you could get. Below are some of examples within the
+Markdown language:
 
-**Quick Guide**:
+**Examples**:
 
-  Content                                              Markdown syntax
-  ---------------------------------------------------- -----------------------------------
-  Header                                               `#header`
-  *word in italics*                                    `_word in italics_`
-  **word in bold**                                     `**word in bold**`
-  web links for urls [Google](http://www.google.com)   `[Google](http://www.google.com)`
-  horizontal rules                                     `***`
-  block quotes                                         `> block quotes`
+-   #### Header
 
-                        Content                                  Markdown syntax
-  ---------------------------------------------------- -----------------------------------
-                         Header                                    `##header`
-                   *word in italics*                               `*italic*`
-                    **word in bold**                               `**bold**`
-   web links for urls [Google](http://www.google.com)   `[Google](http://www.google.com)`
-                    horizontal rules                                  `***`
-                      block quotes                              `> block quotes`
-                          list                                     `1. List 1`
-                     unordered list                                    `-`
-                     coding syntax                                `python ...`
-                       line break                                    <Enter>
+    -   `##header`
+-   *Italics*
+    -   `*word*`
+-   **Bold**
+    -   `**word**`
+-   [Google](http://www.google.com)
+    -   '[Google](http://www.google.com)'
+-   List
+    -   `-, *, or +`
+-   Ordered List
+    -   `1. Item`
 
 ### bash
 
