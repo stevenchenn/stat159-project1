@@ -206,6 +206,33 @@ to away disastrous roll-backs if something goes wrong.
 
 ![](../images/markdown-logo.png)
 
+Markdown is a lightweight markup language with plain text formatting
+syntax designed to be converted to HTML, PDF, and other formats. It is
+widely used to create readme files and provide rich text in a plain text
+editor. In this project, all the documents are written in Markdown,
+including the README file. Markdown is extremely simple and fast, so
+writers can format a document with far less time that writing in other
+syntax. One major advantage of using Markdown is the portability of the
+file, as writer can exit the file in any text editor in any system.
+There is no need to compress and archive because the size of the file is
+the smallest you could get. Below are some of the most important
+features within the Markdown language:
+
+**Quick Guide**:
+
+        Content                 Markdown syntax
+  -------------------- ---------------------------------
+         Header                   `##header`
+   *word in italics*              `*italic*`
+    **word in bold**              `**bold**`
+   web links for urls   [Google](http://www.google.com)
+    horizontal rules                 `***`
+      block quotes             `> block quotes`
+          list                    `1. List 1`
+     unordered list                   `-`
+     coding syntax               `python ...`
+       line break                   <Enter>
+
 ### bash
 
 ### Pandoc
