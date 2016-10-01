@@ -220,18 +220,27 @@ features within the Markdown language:
 
 **Quick Guide**:
 
-        Content                 Markdown syntax
-  -------------------- ---------------------------------
-         Header                   `##header`
-   *word in italics*              `*italic*`
-    **word in bold**              `**bold**`
-   web links for urls   [Google](http://www.google.com)
-    horizontal rules                 `***`
-      block quotes             `> block quotes`
-          list                    `1. List 1`
-     unordered list                   `-`
-     coding syntax               `python ...`
-       line break                   <Enter>
+  Content                                              Markdown syntax
+  ---------------------------------------------------- -----------------------------------
+  Header                                               `#header`
+  *word in italics*                                    `_word in italics_`
+  **word in bold**                                     `**word in bold**`
+  web links for urls [Google](http://www.google.com)   `[Google](http://www.google.com)`
+  horizontal rules                                     `***`
+  block quotes                                         `> block quotes`
+
+                        Content                                  Markdown syntax
+  ---------------------------------------------------- -----------------------------------
+                         Header                                    `##header`
+                   *word in italics*                               `*italic*`
+                    **word in bold**                               `**bold**`
+   web links for urls [Google](http://www.google.com)   `[Google](http://www.google.com)`
+                    horizontal rules                                  `***`
+                      block quotes                              `> block quotes`
+                          list                                     `1. List 1`
+                     unordered list                                    `-`
+                     coding syntax                                `python ...`
+                       line break                                    <Enter>
 
 ### bash
 
