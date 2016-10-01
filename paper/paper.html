@@ -3,7 +3,7 @@
 <img src="../images/stat159-logo.png" />
 
 </div>
-<p>This paper will go through many different types of computational tools that help make developing new software or research as well as collaborating much easier and more efficient. The tools that this paper will discuss are Git, GitHub, pandoc, Markdown, Make, and Vim text editor. It will dive into the pros and cons of using these different types of tools and how to use them to create a reproducible project. After reading, one can easily follow the same steps and achieve reproducible results, and hopefully maintain such practice in the long term for future development and research. Lastly, this paper will conlude with discussions on other software considerations as well as on reproducible computational research.</p>
+<p>This paper will go through many different types of computational tools that help make developing new software or research as well as collaborating much easier and more efficient. The tools that this paper will discuss are Git, GitHub, pandoc, Markdown, Make, and Vim text editor. It will dive into the benefits of using these different types of tools and how to use them to create a reproducible project. After reading, one can easily follow the same steps and achieve reproducible results, and hopefully maintain such practice in the long term for future development and research. Lastly, this paper will conlude with discussions on other software considerations as well as on reproducible computational research.</p>
 <h2 id="introduction">Introduction</h2>
 <p>One might ask, what is <em>reproducibility</em> and why is it important? Imagine a researcher has spent tens of hours to write a piece of computational tool that was vital to his or her research project. However, the researcher forgets to mark down the steps to obtain the final result. Not only does the researcher now have to restart from scratch and rewrite the whole process, but the researcher also has to remember the correct steps. Having reproducibility in one's research allows same or different researchers to replicate identical findings under the same environment, including computer systems, data input, and parameters. Having the ability to reproduce identical results allows other researchers to expand on the research in a collaborative manner. This paper will go through some tools that will help with collaborative and reproducible research:</p>
 <ul>
@@ -107,7 +107,7 @@
 </ul></li>
 <li><a href="http://www.google.com">Google</a>
 <ul>
-<li>'<a href="http://www.google.com">Google</a>'</li>
+<li><code>[Google](http://www.google.com)</code></li>
 </ul></li>
 <li>List
 <ul>
@@ -119,9 +119,17 @@
 </ul></li>
 </ul>
 <h3 id="bash">bash</h3>
+<p>Bash is a Unix shell and command language that runs in a text window, where user types commands that causes action within the user's system. Users can save bash commands in a file, called script, so all commands can be run over and over without having to type them out, which is how some automations are done. Throughout this project, I had to use bash commands to connect to GitHub, initialize a new repo, save changes, and convert document types. It is an extremely useful tool to learn.</p>
 <h3 id="pandoc">Pandoc</h3>
 <div class="figure">
 <img src="../images/pandoc-logo.png" />
 
 </div>
+<p>Pandoc is an open-source software document converter, having the ability to produce documents in a variety of formats from Markdown files. Writers can even incorporate statistical analysis written in R and processed with Knitr in the documents. Possible input document types include (but are not limited to) markdown, reStructuredText, textile, HTML, DocBook, LaTeX, MediaWiki markup, TWiki markup, OPML, Emacs Org-Mode, Txt2Tags, Microsoft Word docx, LibreOffice ODT, EPUB, and Haddock markup. Possible output document types include (but are not limited to) HTML formats (HTML5, XHTML), Ebooks, XML, docx, OPML, LaTeX, Markdown, DokuWiki markup, DocBook, PDF, and InDesign ICML. Pandoc is a command-line tool, making it extremely easy to incorporate into automated scripts and systems. In this project, I used Pandoc to combine various Markdown files into a single Markdown file, and then converting that file to HTML output format. Below is an example on how to achieve that:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">//pandoc</span> -o OUTPUT INPUT
+<span class="kw">pandoc</span> -o paper/paper.md paper/sections/*.md 
+<span class="kw">pandoc</span> -o paper/paper.html paper/paper.md
+
+<span class="kw">//To</span> PDF
+<span class="kw">pandoc</span> -o paper/paper.pdf --latex-engine=xelatex paper/paper.md</code></pre></div>
 <h3 id="makefile">Makefile</h3>

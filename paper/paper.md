@@ -7,13 +7,13 @@ This paper will go through many different types of computational tools
 that help make developing new software or research as well as
 collaborating much easier and more efficient. The tools that this paper
 will discuss are Git, GitHub, pandoc, Markdown, Make, and Vim text
-editor. It will dive into the pros and cons of using these different
-types of tools and how to use them to create a reproducible project.
-After reading, one can easily follow the same steps and achieve
-reproducible results, and hopefully maintain such practice in the long
-term for future development and research. Lastly, this paper will
-conlude with discussions on other software considerations as well as on
-reproducible computational research.
+editor. It will dive into the benefits of using these different types of
+tools and how to use them to create a reproducible project. After
+reading, one can easily follow the same steps and achieve reproducible
+results, and hopefully maintain such practice in the long term for
+future development and research. Lastly, this paper will conlude with
+discussions on other software considerations as well as on reproducible
+computational research.
 
 Introduction
 ------------
@@ -220,7 +220,7 @@ Markdown language:
 -   **Bold**
     -   `**word**`
 -   [Google](http://www.google.com)
-    -   '[Google](http://www.google.com)'
+    -   `[Google](http://www.google.com)`
 -   List
     -   `-, *, or +`
 -   Ordered List
@@ -228,8 +228,41 @@ Markdown language:
 
 ### bash
 
+Bash is a Unix shell and command language that runs in a text window,
+where user types commands that causes action within the user's system.
+Users can save bash commands in a file, called script, so all commands
+can be run over and over without having to type them out, which is how
+some automations are done. Throughout this project, I had to use bash
+commands to connect to GitHub, initialize a new repo, save changes, and
+convert document types. It is an extremely useful tool to learn.
+
 ### Pandoc
 
 ![](../images/pandoc-logo.png)
+
+Pandoc is an open-source software document converter, having the ability
+to produce documents in a variety of formats from Markdown files.
+Writers can even incorporate statistical analysis written in R and
+processed with Knitr in the documents. Possible input document types
+include (but are not limited to) markdown, reStructuredText, textile,
+HTML, DocBook, LaTeX, MediaWiki markup, TWiki markup, OPML, Emacs
+Org-Mode, Txt2Tags, Microsoft Word docx, LibreOffice ODT, EPUB, and
+Haddock markup. Possible output document types include (but are not
+limited to) HTML formats (HTML5, XHTML), Ebooks, XML, docx, OPML, LaTeX,
+Markdown, DokuWiki markup, DocBook, PDF, and InDesign ICML. Pandoc is a
+command-line tool, making it extremely easy to incorporate into
+automated scripts and systems. In this project, I used Pandoc to combine
+various Markdown files into a single Markdown file, and then converting
+that file to HTML output format. Below is an example on how to achieve
+that:
+
+``` {.bash}
+//pandoc -o OUTPUT INPUT
+pandoc -o paper/paper.md paper/sections/*.md 
+pandoc -o paper/paper.html paper/paper.md
+
+//To PDF
+pandoc -o paper/paper.pdf --latex-engine=xelatex paper/paper.md
+```
 
 ### Makefile
