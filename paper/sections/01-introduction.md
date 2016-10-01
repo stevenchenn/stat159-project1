@@ -5,6 +5,7 @@ One might ask, what is *reproducibility* and why is it important? Imagine a rese
 - Git
 - GitHub
 - Markdown
+- bash
 - Pandoc
 - Makefile
 
