@@ -44,21 +44,21 @@ git pull origin master
 
 Below are some useful commands of git:
 - **git help**
-        - help document
+    - help document
 - **git config**
-        - configuration
+    - configuration
 - **git init**
-        - initialize a new repo
+    - initialize a new repo
 - **git status**
-        - check status of files in the repo
+    - check status of files in the repo
 - **git add**
-        - stage changes of specific files
+    - stage changes of specific files
 - **git commit** 
-        - save staged changes into a commit with a message
+    - save staged changes into a commit with a message
 - **git log**
-        - see a history of all changes
+    - see a history of all changes
 - **git diff**
-        - see changes between commits or files
+    - see changes between commits or files
 ---
 
 ###GitHub
