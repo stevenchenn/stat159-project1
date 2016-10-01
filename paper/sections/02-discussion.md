@@ -45,28 +45,20 @@ git pull origin master
 Below are some useful commands of git:
 
 - **git help**
-
     - help document
 - **git config**
-
     - configuration
 - **git init**
-
     - initialize a new repo
 - **git status**
-
     - check status of files in the repo
 - **git add**
-
     - stage changes of specific files
 - **git commit** 
-
     - save staged changes into a commit with a message
 - **git log**
-
     - see a history of all changes
 - **git diff**
-
     - see changes between commits or files
 
 ###GitHub
@@ -97,18 +89,9 @@ Markdown is a lightweight markup language with plain text formatting syntax desi
 
 **Quick Guide**:
 
-| Content               | Markdown syntax          | 
-|:----------------------|:-------------------------|
-| Header                | `#header`                |
-| _word in italics_     | `_word in italics_ `     |
-| **word in bold**      | `**word in bold**`       |
-| web links for urls [Google](http://www.google.com)| `[Google](http://www.google.com)`|
-| horizontal rules | `***`|
-| block quotes | `> block quotes`|
-
+- Header
+    
   
-| Content   | Markdown syntax     | 
-|:-------------:|:------------------:|
 | Header        | `##header`         |
 | _word in italics_ | `*italic*`  |
 | **word in bold** | `**bold**`     |
