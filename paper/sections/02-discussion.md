@@ -116,6 +116,9 @@ Pandoc is an open-source software document converter, having the ability to prod
 //pandoc -o OUTPUT INPUT
 pandoc -o paper/paper.md paper/sections/*.md 
 pandoc -o paper/paper.html paper/paper.md
+
+//To PDF
+pandoc -o paper/paper.pdf --latex-engine=xelatex paper/paper.md
 ```
 
 ###Makefile
