@@ -266,3 +266,83 @@ pandoc -o paper/paper.pdf --latex-engine=xelatex paper/paper.md
 ```
 
 ### Makefile
+
+Makefile is a file containing a set of directives used with the *make*
+build automation tool, usually directs *make* how to compile files and
+link the files into a program. For this project, Makefile is used mostly
+to automate a set of commands that I need to merge and convert the
+documents into a HTML output file. However in the industry, larger
+projects will benefit from Makefile significantly by reducing its build
+time because *make* keeps tracks of unchanged files and only recompile
+changed files. As you can probably tell, if a project takes hours to
+compile, a developer doesn't want to recompile the whole project just to
+see the effect of changing a few lines. In this project, I made a very
+simple Makefile to automate the process:
+
+``` {.bash}
+mdfiles = paper/sections/*.md
+
+all: paper.html
+
+paper.html: $(mdfiles)
+    pandoc -o paper/paper.md $(mdfiles)
+    pandoc -o paper/paper.html paper/paper.md
+
+clean:
+    rm paper/*.html
+```
+
+I will now explain each line in my Makefile and show how one can use the
+same structure for automation.
+
+First we can define variables that we can reference throughout the
+Makefile with `$()`:
+
+``` {.bash}
+mdfiles = paper/sections/*.md
+//reference by $(mdfiles)
+```
+
+`all` is a special word that specifies which targets to execute when
+*make* is called in the command line. In my case, I only want to create
+`paper.html`:
+
+``` {.bash}
+all: paper.html
+```
+
+Now let's talk about the targets and dependencies. The structure of a
+Makefile is pretty standard:
+
+``` {.bash}
+target: dependencies
+        commands
+```
+
+In my example, the target file is paper.html, which is the file I am
+trying to create. The dependencies are a list of Markdown files that I
+stored into a variable, which are the files that I need in order to
+create the output file. My commands are pandoc commands to combine a
+list of Markdown files into a single Markdown file, and then converting
+that into an HTML file. We could combine the commands into one line by
+using ***;*** if one prefers. These commands tell the computer how I
+want to generate the output file using the dependencies I have.
+
+``` {.bash}
+paper.html: $(mdfiles)
+    pandoc -o paper/paper.md $(mdfiles); pandoc -o paper/paper.html paper/paper.md
+```
+
+Lastly, I want to add in a *phony* target `clean` to make sure my
+folders are cleaned and all unnecessary files are deleted before I
+generate a new version of the targets, and in this project, the HTML
+file is the only thing that needs to be removed:
+
+``` {.bash}
+clean:
+    rm paper/*.html
+```
+
+As one can see, Makefile is not as daunting as it looks or sounds. Users
+just need to understand the structure of the Makefile and repeat it. It
+really makes automation a breeze.
