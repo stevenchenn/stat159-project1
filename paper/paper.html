@@ -36,12 +36,55 @@
 <span class="kw">git</span> push origin branch</code></pre></div>
 <p>Collaborators can get the newest changes by <em>pulling</em> from the remote repo:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> pull origin master</code></pre></div>
-<p>Below are some useful commands of git: - <strong>git help</strong> - help document - <strong>git config</strong> - configuration - <strong>git init</strong> - initialize a new repo - <strong>git status</strong> - check status of files in the repo - <strong>git add</strong> - stage changes of specific files - <strong>git commit</strong> - save staged changes into a commit with a message - <strong>git log</strong> - see a history of all changes - <strong>git diff</strong> - see changes between commits or files ---</p>
+<p>Below are some useful commands of git:</p>
+<ul>
+<li><p><strong>git help</strong></p>
+<ul>
+<li>help document</li>
+</ul></li>
+<li><p><strong>git config</strong></p>
+<ul>
+<li>configuration</li>
+</ul></li>
+<li><p><strong>git init</strong></p>
+<ul>
+<li>initialize a new repo</li>
+</ul></li>
+<li><p><strong>git status</strong></p>
+<ul>
+<li>check status of files in the repo</li>
+</ul></li>
+<li><p><strong>git add</strong></p>
+<ul>
+<li>stage changes of specific files</li>
+</ul></li>
+<li><p><strong>git commit</strong></p>
+<ul>
+<li>save staged changes into a commit with a message</li>
+</ul></li>
+<li><p><strong>git log</strong></p>
+<ul>
+<li>see a history of all changes</li>
+</ul></li>
+<li><p><strong>git diff</strong></p>
+<ul>
+<li>see changes between commits or files</li>
+</ul></li>
+</ul>
 <h3 id="github">GitHub</h3>
 <div class="figure">
 <img src="../images/github-logo.png" />
 
 </div>
+<p>GitHub is a web-based Git repository hosting service. It extends git by providing all the git functionalities as well as adding different new collaboration features. One important feature GitHub provides is the ability to have private repos. Users have the ability to develop privately with others and not have the public know what they're working on. Although that defeats the purpose of having open-source and distributable research, it provides some necessary privacy when the project or research is confidential. GitHub is a very important tool because it brings git's command line interface onto the web, which is significantly more user friendly for non-tech savy individuals. Different collaborators can see changes and differences straight from the web with animations and color syntax. In this project, I used GitHub to clone the project specs and images from Professor's GitHub repo:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/ucb-stat159/stat159-fall-2016.git</code></pre></div>
+<p>The cloned folder automatically is a git repo, with all the functionalities described above. The default name for the remote repo it's tracking is <em>origin</em>. If, in my case, I wanted to create a blank repo on GitHub and connect my local git repo to that, I can simply add the remote repo onto my current repo with the following commands and the remote repo will keep track on my local repo:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> remote add origin https://github.com/username/reponame
+<span class="kw">//edit</span> files
+<span class="kw">git</span> add file1
+<span class="kw">git</span> commit -m <span class="st">&#39;initial commit&#39;</span>
+<span class="kw">git</span> push origin master</code></pre></div>
+<p>The whole point of version control system is to prevent unnecessary back-tracking and allow collaborators to efficiently and quickly store changes without breaking anybody else's code. Git combined with GitHub allow us to do just that by provided a distributed solution, keeping changes both locally and on the network, so everyone can be in-sync in an organized way. Remember to do changes in small bits and commit often to away disastrous roll-backs if something goes wrong.</p>
 <h3 id="markdown">Markdown</h3>
 <div class="figure">
 <img src="../images/markdown-logo.png" />

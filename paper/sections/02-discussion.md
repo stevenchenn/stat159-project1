@@ -43,26 +43,52 @@ git pull origin master
 ```
 
 Below are some useful commands of git:
+
 - **git help**
+
     - help document
 - **git config**
+
     - configuration
 - **git init**
+
     - initialize a new repo
 - **git status**
+
     - check status of files in the repo
 - **git add**
+
     - stage changes of specific files
 - **git commit** 
+
     - save staged changes into a commit with a message
 - **git log**
+
     - see a history of all changes
 - **git diff**
+
     - see changes between commits or files
----
 
 ###GitHub
 ![](../images/github-logo.png)
+
+GitHub is a web-based Git repository hosting service. It extends git by providing all the git functionalities as well as adding different new collaboration features. One important feature GitHub provides is the ability to have private repos. Users have the ability to develop privately with others and not have the public know what they're working on. Although that defeats the purpose of having open-source and distributable research, it provides some necessary privacy when the project or research is confidential. GitHub is a very important tool because it brings git's command line interface onto the web, which is significantly more user friendly for non-tech savy individuals. Different collaborators can see changes and differences straight from the web with animations and color syntax. In this project, I used GitHub to clone the project specs and images from Professor's GitHub repo:
+
+```bash
+git clone https://github.com/ucb-stat159/stat159-fall-2016.git
+```
+
+The cloned folder automatically is a git repo, with all the functionalities described above. The default name for the remote repo it's tracking is *origin*. If, in my case, I wanted to create a blank repo on GitHub and connect my local git repo to that, I can simply add the remote repo onto my current repo with the following commands and the remote repo will keep track on my local repo:
+
+```bash
+git remote add origin https://github.com/username/reponame
+//edit files
+git add file1
+git commit -m 'initial commit'
+git push origin master
+```
+
+The whole point of version control system is to prevent unnecessary back-tracking and allow collaborators to efficiently and quickly store changes without breaking anybody else's code. Git combined with GitHub allow us to do just that by provided a distributed solution, keeping changes both locally and on the network, so everyone can be in-sync in an organized way. Remember to do changes in small bits and commit often to away disastrous roll-backs if something goes wrong.
 
 ###Markdown
 ![](../images/markdown-logo.png)
